@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Container helper */
+.services-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero */
+.services-hero{
+  background: linear-gradient(120deg, #1e40af, #3b82f6);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.services-hero__inner{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.services-hero h1{
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.services-hero p{
+  font-size: 16px;
+  opacity: .95;
+}
+
+/* Tags */
+.services-tags{
+  background: var(--svc-bg);
+  padding: 16px 0;
+}
+.services-tags .tag{
+  display: inline-block;
+  margin: 6px 8px 0 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #1e3a8a;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+.services-tags .tag:hover{ transform: translateY(-2px); }
+
+/* Headings */
+.services-heading{
+  font-size: 26px;
+  color: var(--svc-text);
+  margin: 36px 0 18px;
+}
+
+/* Grid */
+.services-catalog{
+  background: var(--svc-bg);
+  padding: 30px 0 70px;
+}
+.services-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 22px;
+}
+
+/* Card */
+.service-card{
+  background: var(--svc-card);
+  border-radius: var(--svc-radius);
+  box-shadow: var(--svc-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.service-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+}
+
+.service-card .badge{
+  position: absolute;
+  z-index: 2;
+  margin: 12px;
+  background: var(--svc-green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.service-card .badge.sale{ background: var(--svc-accent); }
+
+.service-card img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card .content{
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+.service-card h3{
+  font-size: 18px;
+  color: var(--svc-text);
+}
+.service-card p{
+  font-size: 14px;
+  color: var(--svc-muted);
+  line-height: 1.6;
+}
+
+/* Rating */
+.rating{
+  font-size: 14px;
+  color: #fbbf24; /* amber stars */
+  letter-spacing: 1px;
+}
+.rating span{
+  color: var(--svc-muted);
+  margin-left: 6px;
+}
+
+/* Price */
+.price{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.price .now{
+  color: var(--svc-primary);
+  font-weight: 800;
+  font-size: 18px;
+}
+.price .was{
+  color: #9ca3af;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+/* Buttons area */
+.actions{
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Primary CTA (Order Now) */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.btn.primary{
+  background: #1e40af;   /* blue */
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(30,64,175,.25);
+}
+.btn.primary:hover{
+  transform: translateY(-2px);
+}
+
+/* Secondary (Details) */
+.btn.ghost{
+  background: transparent;
+  color: #1e40af;
+  border: 1px solid #c7d2fe;
+}
+.btn.ghost:hover{
+  background: #eef2ff;
+}
+
+/* Mobile: si ay u fariistaan hal column haddii boosku yaraado */
+@media (max-width: 480px){
+  .actions{
+    flex-direction: column;
+  }
+  .btn{ width: 100%; text-align: center; }
+}

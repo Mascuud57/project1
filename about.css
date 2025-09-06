@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about {
+  margin-top: 40px;
+}
+
+/* About Section */
+.about-section {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+  color: white;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 15px;
+  gap: 20px;
+  flex-wrap: wrap; /* si mobile-ka uu u laabmo */
+}
+
+.about-section1 h1 {
+  color: red;
+  margin-bottom: 15px;
+}
+.about-section1 p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.about-section1 h3 {
+  margin-bottom: 10px;
+}
+.about-section1 ul {
+  padding-left: 20px;
+  list-style: disc;
+  line-height: 1.6;
+}
+
+/* About image */
+.about-img img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Vision & Mission */
+.about0 {
+  display: flex;
+  background-color: blue;
+  width: 90%;
+  margin: 60px auto;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-vision,
+.about-mission {
+  flex: 1 1 300px;
+}
+
+/* Our Team */
+.our {
+  margin-top: 60px;
+}
+.our h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.our-team {
+  background-color: blue;
+  width: 90%;
+  margin: 0 auto 60px auto;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+.team1 {
+  text-align: center;
+  flex: 1 1 250px;
+}
+.team1 img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+.team1 h3 {
+  margin-bottom: 5px;
+}
+.team1 p {
+  font-size: 14px;
+  color: #f3f4f6;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 90px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about0 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .our-team {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team1 {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section,
+  .about0,
+  .our-team {
+    width: 95%;
+    padding: 15px;
+  }
+  .about-section1 p,
+  .about-vision p,
+  .about-mission p {
+    font-size: 14px;
+  }
+  .team1 img {
+    max-width: 200px;
+  }
+}
